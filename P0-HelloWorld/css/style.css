@@ -12,10 +12,68 @@
    ========================================================================== */
 
 html {
-  color: #222;
+  color: #272E5E;
   font-size: 1em;
   line-height: 1.4;
 }
+
+body {
+    font-size: 1em;  /* Grundstorlek */
+    padding: 1rem;
+  background-color: #BEC4EB; /* välj din färg här */
+  max-width: 800px;       /* begränsar radlängden för bättre läsbarhet */
+  margin: 0 auto;         /* centrerar blocket horisontellt */
+  text-align: center;     /* centrerar själva textinnehållet */
+  padding: 1rem;          /* lite luft så texten inte klistrar mot kanten */
+}
+
+/* Media Query: större skärmar */
+@media (min-width: 600px) {
+  body {
+    font-size: 1.1em;
+    padding: 2rem;
+  }
+
+  .img-medium {
+    max-width: 600px;  /* återgår till normalstorlek */
+  }
+
+  .highlight-section {
+    padding: 2rem;
+  }
+}
+
+/* Media Query: extra stora skärmar */
+@media (min-width: 900px) {
+  body {
+    font-size: 1.2em;
+    padding: 3rem;
+  }
+
+  .highlight-section img {
+    max-width: 200px;
+  }
+}
+
+.img-medium {
+  max-width: 90%;
+  display: block;          /* gör att bilden beter sig som block-element */
+  /*max-width: 600px;        /* begränsar maxstorlek (ändra efter behov) */
+  width: 100%;             /* ser till att bilden skalar ner på små skärmar */
+  height: auto;            /* behåller proportionerna */
+  margin: 1rem auto;       /* centrerar bilden och ger lite luft runt */
+}
+
+.container {
+  display: grid;
+  place-content: center;
+}
+
+.element {
+  grid-row: 1;
+  grid-column: 1;
+}
+
 
 /*
  * Remove text-shadow in selection highlight:
@@ -244,4 +302,19 @@ textarea {
     page-break-after: avoid;
   }
 }
+/* Ny sektion med annan bakgrundsfärg */
+.highlight-section {
+  background-color: #FFDAB9; /* ändra färg efter behov */
+  padding: 1rem;
+  text-align: center;
+  margin: 2rem 0; /* lite avstånd från övrigt innehåll */
+}
 
+/* Små bilder i highlight-sektionen */
+.highlight-section img {
+  max-width: 150px; /* mindre bilder */
+  width: 100%;
+  height: auto;
+  margin: 0.5rem;
+  display: inline-block; /* håller bilderna på samma rad om det finns plats */
+}
