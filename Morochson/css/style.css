@@ -32,15 +32,17 @@ a { text-decoration:none; color:inherit; }
 }
 .header-inner {
   display:flex;
-  justify-content:space-between;
+  justify-content:flex-start; /* allt hamnar till vänster */
   align-items:center;
-  padding:1rem 0;
+  gap: 2rem; /* lägger lite luft mellan logo och meny */
+
 }
 .logo { font-size:1.8rem; font-weight:700; }
 .main-nav ul {
   display:flex;
   list-style:none;
   gap:2rem;
+  justify-content: flex-start; /* placerar dem till vänster */
 }
 .main-nav a { color:#fff; font-weight:500; }
 .main-nav a:hover { color:#f90; }
@@ -163,8 +165,8 @@ a { text-decoration:none; color:inherit; }
 /* ==== RESPONSIVE ==== */
 @media (max-width:768px) {
   .main-nav {
-    display:none;
-    position:absolute;
+    display:flex;
+    position:static;
     top:60px; right:0;
     background:#000;
     padding:1rem;
