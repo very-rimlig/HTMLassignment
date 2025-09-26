@@ -7,8 +7,7 @@ body {
   h1, h2, h3, h4 {
     font-weight: 700; /* lite fetare för rubriker */
     letter-spacing: -0.02em; /* lite tajtare bokstäver för snyggare rubriker */
-  }
-
+    color: #eb07c8;
   p {
     font-weight: 300; /* tunnare för brödtext */
   }
@@ -28,7 +27,7 @@ a { text-decoration:none; color:inherit; }
 .site-header {
   position:relative;
   background:#000;
-  color:#fff;
+  color:#ffffff;
 }
 .header-inner {
   display:flex;
@@ -51,7 +50,7 @@ a { text-decoration:none; color:inherit; }
   display:none;
   background:none;
   border:none;
-  color:#fff;
+  color: #ff9900;
   font-size:1.5rem;
 }
 
@@ -163,7 +162,7 @@ a { text-decoration:none; color:inherit; }
 }
 
 /* ==== RESPONSIVE ==== */
-@media (max-width:768px) {
+@media (max-width:500px) {
   .main-nav {
     display:flex;
     position:static;
@@ -175,4 +174,3 @@ a { text-decoration:none; color:inherit; }
   .main-nav ul { flex-direction:column; gap:1rem; }
   .nav-toggle { display:block; }
   .about-content { flex-direction:column; }
-}
